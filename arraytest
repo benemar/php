@@ -1,0 +1,26 @@
+<?php
+/* Write your PHP code here */
+$scelta ="libro rosso";
+$libri = array("libro rosso"=>"alessandro manzoni","libro verde"=>"giovanni pascoli","libro giallo"=>"giovanni verga");
+$prestito=array ("libro rosso"=>"1","libro verde"=>"0","libro giallo"=>"1");
+echo "$scelta  $libri[$scelta]</br>";
+$cerca =array_key_exists($scelta, $libri); //TRUE  
+if ($cerca){
+echo "il libro esiste <br/>";
+	if ($prestito[$scelta]==1){
+        	echo "libro disponibile </br>";
+	}
+		else {
+		    	echo "libro non disponibile </br>";
+	echo "Biblioteche dove il volume $scelta è disponibile </br>";
+	$biblioteca = array ("bivlioteca"=>"081542445","biblioteca aurora"=>"5554554545","biblioteca monte"=>"jjksdjksjk");
+	foreach ($biblioteca as $key => $value){
+	echo" $key   $value </br>";
+	}
+}}
+	elseif (!$cerca){
+		echo "libro non in elenco";
+}
+	
+	
+?>
